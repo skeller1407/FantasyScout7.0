@@ -1,0 +1,40 @@
+{
+  "version": "1.2",
+  "GET /v1/sync": {
+    "players": [
+      {
+        "id": "string",
+        "name": "string",
+        "club": "string",
+        "position": "TW|ABW|MF|ST",
+        "status": "string",
+        "comunioValue": "number|null",
+        "kickbaseValue": "number|null",
+        "opponent": "string|null",
+        "homeMatch": "boolean|null",
+        "opponentRank": "1..18|null",
+        "opponentStrength": "1..5|null",
+        "startingProbability": "0..100|null",
+        "matchday": "number|null",
+        "fixtureSource": "string|null"
+      }
+    ],
+    "news": [
+      {
+        "id": "string",
+        "playerId": "string|null",
+        "source": "string",
+        "title": "string",
+        "summary": "string",
+        "url": "string",
+        "publishedAt": "string",
+        "relevance": "info|positive|watch|negative",
+        "injury": "boolean"
+      }
+    ],
+    "syncedAt": "ISO-8601",
+    "warnings": [
+      "string"
+    ]
+  }
+}

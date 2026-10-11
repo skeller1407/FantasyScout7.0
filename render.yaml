@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: fantasyscout-backend
+    runtime: python
+    plan: free
+    buildCommand: python -m compileall backend
+    startCommand: cd backend && python server.py
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: FANTASYSCOUT_DATA
+        value: /tmp/fantasyscout/latest.json
